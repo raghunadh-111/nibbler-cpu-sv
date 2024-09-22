@@ -16,7 +16,7 @@
         <mxCell id="ERdX-zV75CLCQFePryyj-4" value="Reg 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="520" y="80" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ERdX-zV75CLCQFePryyj-5" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=west;" vertex="1" parent="1">
+        <mxCell id="ERdX-zV75CLCQFePryyj-5" value="Register Mux" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=west;" vertex="1" parent="1">
           <mxGeometry x="120" y="160" width="480" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ERdX-zV75CLCQFePryyj-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="ERdX-zV75CLCQFePryyj-1">
@@ -42,6 +42,39 @@
             <mxPoint x="559.6600000000001" y="161" as="sourcePoint" />
             <mxPoint x="559.6600000000001" y="120" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-12" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-13" value="Accu&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22endArrow%3Dnone%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.667%3BexitY%3D0.972%3BexitDx%3D0%3BexitDy%3D0%3BexitPerimeter%3D0%3B%22%20edge%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20width%3D%2250%22%20height%3D%2250%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22280%22%20y%3D%22161%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%22280%22%20y%3D%22120%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;mulator" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="250" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-16" value="Tmp Register" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="290" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-17" value="ALU flags" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="370" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-18" value="Instruction&lt;div&gt;Reg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="250" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-19" value="Instruction Pointer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="370" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-20" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="40" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="310" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="350" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="390" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ERdX-zV75CLCQFePryyj-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="430" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

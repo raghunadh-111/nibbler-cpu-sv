@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 17 15:07:34 2024
+# Process ID: 2204
+# Current directory: D:/Vivado/NibblerCPU_2p5mhz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13836 D:\Vivado\NibblerCPU_2p5mhz\NibblerCPU_2p5mhz.xpr
+# Log file: D:/Vivado/NibblerCPU_2p5mhz/vivado.log
+# Journal file: D:/Vivado/NibblerCPU_2p5mhz\vivado.jou
+# Running On: LAPTOP-7N4AO7HD, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+report_power -hier -name pwr_2 -file {D:/Vivado/NibblerCPU_2p5mhz/report_power_synth_hier.txt}
+report_power -hier -name pwr_2
+report_utilization -hierarchical -name ut_2 -file {D:/Vivado/NibblerCPU_2p5mhz/utilization_report_synth_hier.txt}
+report_utilization -hierarchical  -file {D:/Vivado/NibblerCPU_2p5mhz/utilization_report_synth_hier.txt}
+close_design
+open_run impl_1
+report_utilization -file D:/Vivado/NibblerCPU_2p5mhz/report_utili_impl.txt -name utilization_1
+report_utilization -hierarchical -file D:/Vivado/NibblerCPU_2p5mhz/report_utili_impl_hier.txt
+report_power
+report_power -file {D:/Vivado/NibblerCPU_2p5mhz/report_power_user.txt} -name {power_2}
+report_clock_networks -name {network_1}

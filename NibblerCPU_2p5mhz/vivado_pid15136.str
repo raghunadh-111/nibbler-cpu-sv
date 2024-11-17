@@ -1,0 +1,331 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 15136
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Nov 16 22:14:34 IST 2024
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 2
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	raghu
+User home directory: C:/Users/raghu
+User working directory: D:/Vivado/NibblerCPU_2p5mhz
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2022.1
+RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: C:/Users/raghu/AppData/Roaming/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: C:/Users/raghu/AppData/Roaming/Xilinx/Vivado/2022.1/
+Vivado layouts directory: C:/Users/raghu/AppData/Roaming/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	D:/Vivado/NibblerCPU_2p5mhz/vivado.log
+Vivado journal file: 	D:/Vivado/NibblerCPU_2p5mhz/vivado.jou
+Engine tmp dir: 	D:/Vivado/NibblerCPU_2p5mhz/.Xil/Vivado-15136-LAPTOP-7N4AO7HD
+
+Xilinx Environment Variables
+----------------------------
+ANDROID_SDK_HOME: C:\Android
+XILINX: C:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2022.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,365 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Vivado\NibblerCPU_2p5mhz\NibblerCPU_2p5mhz.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 65 MB. Current time: 11/16/24, 10:14:35 PM IST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 81 MB (+82982kb) [00:00:16]
+// [Engine Memory]: 1,365 MB (+1279564kb) [00:00:16]
+// [GUI Memory]: 100 MB (+15503kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  3488 ms.
+// Tcl Message: open_project D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1613.266 ; gain = 0.000 
+// [GUI Memory]: 124 MB (+19109kb) [00:00:19]
+// Project name: NibblerCPU_2p5mhz; location: D:/Vivado/NibblerCPU_2p5mhz; part: xc7z020clg484-1
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4); // D
+// PAPropertyPanels.initPanels (NibblerSDC.xdc) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, NibblerSDC.xdc]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, NibblerSDC.xdc]", 6, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("NibblerSDC.xdc", 403, 220); // be
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Runs 36-568] The incremental synthesis mode is currently set as OFF, the incremental reference file will not be loaded, and the synthesis will run in the default flow. 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 132 MB (+1813kb) [00:01:04]
+// Tcl Message: [Sat Nov 16 22:15:26 2024] Launched synth_1... Run output will be captured here: D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1613.266 ; gain = 0.000 
+// 'k' command handler elapsed time: 17 seconds
+// Elapsed time: 15 seconds
+dismissDialog("Starting Design Runs"); // bA
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sat Nov 16 22:15:24 IST 2024 ; 00:00:03 ; Vivado Synthesis Defaults* (Vivado Synthesis 2022) ; Vivado Synthesis Default Reports (Vivado Synthesis 2022) ; xc7z020clg484-1 ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // az - Node
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.5s
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Log", 3); // i
+// [GUI Memory]: 143 MB (+4623kb) [00:04:01]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 355 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Nov 16 22:21:48 2024] Launched impl_1... Run output will be captured here: D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 1613.266 ; gain = 0.000 
+// 'c' command handler elapsed time: 17 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Starting Design Runs"); // bA
+// Elapsed time: 19 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; Running Design Initialization... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sat Nov 16 22:21:44 IST 2024 ; 00:00:21 ; Vivado Implementation Defaults* (Vivado Implementation 2022) ; Vivado Implementation Default Reports (Vivado Implementation 2022) ; xc7z020clg484-1 ; Default settings for Implementation.", 1, "Running Design Initialization...", 2, false); // az
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true, false, false, false, true, false); // n - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_IMPL_SETTINGS, "Implementation Settings..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// 'et' command handler elapsed time: 3 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  3338 ms.
+// [GUI Memory]: 177 MB (+28812kb) [00:08:57]
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Settings"); // d
+// [GUI Memory]: 202 MB (+17152kb) [00:09:13]
+// Elapsed time: 476 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 289, 134); // T
+// Elapsed time: 20 seconds
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aL
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "DRC - Opt Design ; report_drc ;  ;  ; ", 9, "DRC - Opt Design", 0, false); // O
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "DRC - Opt Design ; report_drc ;  ;  ; ", 9, "DRC - Opt Design", 0, false, false, false, false, true, false); // O - Popup Trigger
+selectMenuItem(PAResourceEtoH.ExpReportTreePanel_DISABLE_REPORT, "Disable Report"); // ar
+// Tcl Command: 'set_property IS_ENABLED false [get_report_config -of_object [get_runs impl_1] impl_1_opt_report_drc_0]'
+// TclEventType: REPORT_MODIFY
+// Tcl Message: set_property IS_ENABLED false [get_report_config -of_object [get_runs impl_1] impl_1_opt_report_drc_0] 
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // g
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Cancel Implementation"); // aV
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Nov 16 22:32:30 2024] Launched impl_1... Run output will be captured here: D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 1613.266 ; gain = 0.000 
+// 'c' command handler elapsed time: 17 seconds
+// Elapsed time: 15 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 300 seconds
+selectCodeEditor("NibblerSDC.xdc", 283, 535); // be
+// Elapsed time: 54 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aj
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ao
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ao
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // ar
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aj
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("D:/Vivado/NibblerCPU_3/NibblerCPU_3.xpr");
+// Opening Vivado Project: D:/Vivado/NibblerCPU_3/NibblerCPU_3.xpr. Version: Vivado v2022.1 
+selectButton("OptionPane.button", "No"); // JButton
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: open_project D:/Vivado/NibblerCPU_3/NibblerCPU_3.xpr 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  4282 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'. 
+// Project name: NibblerCPU_3; location: D:/Vivado/NibblerCPU_3; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.266 ; gain = 0.000 
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aL
+// Elapsed time: 304 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // g
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a
+dismissDialog("Cancel Implementation"); // aV
+// Tcl Message: current_project NibblerCPU_2p5mhz 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true, false, false, false, true, false); // n - Popup Trigger - Node
+selectMenu(PAResourceEtoH.ExpRunMenu_LAUNCH_STEP, "Launch Step To"); // ao
+selectMenuItem(PAResourceCommand.PACommandNames_IMPL_SETTINGS, "Implementation Settings..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true, false, false, false, true, false); // n - Popup Trigger - Node
+selectMenu(PAResourceEtoH.ExpRunMenu_LAUNCH_STEP, "Launch Step To"); // ao
+selectMenuItem(PAResourceCommand.PACommandNames_IMPL_SETTINGS, "Implementation Settings..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 108 MB. Current time: 11/16/24, 10:44:36 PM IST
+// Elapsed time: 65 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 16, true, false, false, false, true, false); // n - Popup Trigger - Node
+selectMenu(PAResourceEtoH.ExpRunMenu_LAUNCH_STEP, "Launch Step To"); // ao
+selectMenuItem(PAResourceCommand.PACommandNames_IMPL_SETTINGS, "Implementation Settings..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_IMPL_SETTINGS
+// Elapsed time: 19 seconds
+closeMainWindow("NibblerCPU_2p5mhz - [D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr] - Vivado 2022.1"); // bb
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// HOptionPane Warning: 'Settings dialog is open. Please close it and try again. (Settings)'
+// 'b' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Messages", 5); // i
+closeMainWindow("NibblerCPU_3 - [D:/Vivado/NibblerCPU_3/NibblerCPU_3.xpr] - Vivado 2022.1"); // bb
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Close Project"); // A
+// Tcl Message: current_project NibblerCPU_3 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 103 MB. Current time: 11/16/24, 10:46:26 PM IST
+// 'b' command handler elapsed time: 3 seconds
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13, true, false, false, false, true, false); // n - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SYNTH_SETTINGS, "Synthesis Settings..."); // ar
+// Run Command: PAResourceCommand.PACommandNames_SYNTH_SETTINGS
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aL
+selectTab((HResource) null, (HResource) null, "Log", 2); // aL
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aL
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 320, 45); // dT
+// Elapsed time: 27 seconds
+closeMainWindow("NibblerCPU_2p5mhz - [D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr] - Vivado 2022.1"); // bb
+// Run Command: PAResourceCommand.PACommandNames_EXIT
+// HOptionPane Warning: 'Settings dialog is open. Please close it and try again. (Settings)'
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 11 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Reports", 4); // i
+selectButton((HResource) null, "Properties_settings"); // w: TRUE
+selectButton((HResource) null, "Properties_settings"); // w: FALSE
+selectButton((HResource) null, "Properties_settings"); // w: TRUE
+selectButton((HResource) null, "Properties_settings"); // w: FALSE
+selectButton((HResource) null, "Properties_settings"); // w: TRUE
+selectButton((HResource) null, "Properties_settings"); // w: FALSE
+selectButton((HResource) null, "Properties_settings"); // w: TRUE
+selectButton((HResource) null, "Properties_settings"); // w: FALSE
+closeMainWindow("NibblerCPU_2p5mhz - [D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr] - Vivado 2022.1"); // bb
+// Run Command: PAResourceCommand.PACommandNames_EXIT
+// HOptionPane Warning: 'Settings dialog is open. Please close it and try again. (Settings)'
+selectButton("OptionPane.button", "OK"); // JButton
+closeMainWindow("NibblerCPU_2p5mhz - [D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr] - Vivado 2022.1"); // bb
+// Run Command: PAResourceCommand.PACommandNames_EXIT
+// HOptionPane Warning: 'Settings dialog is open. Please close it and try again. (Settings)'
+selectButton("OptionPane.button", "OK"); // JButton

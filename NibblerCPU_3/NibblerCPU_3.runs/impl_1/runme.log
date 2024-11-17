@@ -1,0 +1,1416 @@
+
+*** Running vivado
+    with args -log Nibbler.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Nibbler.tcl -notrace
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Nibbler.tcl -notrace
+Command: link_design -top Nibbler -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.213 . Memory (MB): peak = 1275.043 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3279 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Nibbler' is not ideal for floorplanning, since the cellview 'Ram' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Vivado/NibblerCPU_3/NibblerCPU_3.srcs/constrs_1/new/NibblerSDC.xdc]
+Finished Parsing XDC File [D:/Vivado/NibblerCPU_3/NibblerCPU_3.srcs/constrs_1/new/NibblerSDC.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1275.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1275.043 ; gain = 0.000
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1275.043 ; gain = 0.000
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[0]_inst_i_2 into driver instance fetch/dataBus_OBUFT[0]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[1]_inst_i_2 into driver instance fetch/dataBus_OBUFT[1]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[2]_inst_i_2 into driver instance fetch/dataBus_OBUFT[2]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[3]_inst_i_2 into driver instance fetch/dataBus_OBUFT[3]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/ffOut_OBUFT[3]_inst_i_2 into driver instance fetch/ffOut_OBUFT[3]_inst_i_3, which resulted in an inversion of 1 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+In IDDR TRANSFORM
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1be9cab83
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 5 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1be9cab83
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-389] Phase Sweep created 9 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               5  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               9  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1783.113 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1ff48afba
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1783.113 ; gain = 508.070
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1783.113 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1ff48afba
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1783.113 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+29 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1783.113 ; gain = 508.070
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1783.113 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Nibbler_drc_opted.rpt -pb Nibbler_drc_opted.pb -rpx Nibbler_drc_opted.rpx
+Command: report_drc -file Nibbler_drc_opted.rpt -pb Nibbler_drc_opted.pb -rpx Nibbler_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:20:19 ; elapsed = 00:13:25 . Memory (MB): peak = 1982.562 ; gain = 199.449
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Nibbler_timing_summary_opted.rpt -pb Nibbler_timing_summary_opted.pb -rpx Nibbler_timing_summary_opted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: place_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 12 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is a/dataOut_reg_1. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[0]_inst_i_1, fetch/aluResult_OBUF[0]_inst_i_2, fetch/aluResult_OBUF[0]_inst_i_3, fetch/aluResult_OBUF[0]_inst_i_4, fetch/aluResult_OBUF[0]_inst_i_6, fetch/aluResult_OBUF[0]_inst_i_7, fetch/aluResult_OBUF[0]_inst_i_8, fetch/aluResult_OBUF[0]_inst_i_9, a/aluResult_OBUF[2]_inst_i_9, fetch/dataBus_OBUFT[0]_inst_i_1, fetch/dataBus_OBUFT[0]_inst_i_3, and fetch/ffOut_OBUFT[0]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[1]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[1]_inst_i_1, fetch/aluResult_OBUF[1]_inst_i_4, fetch/aluResult_OBUF[1]_inst_i_6, fetch/dataBus_OBUFT[1]_inst_i_1, fetch/dataBus_OBUFT[1]_inst_i_3, and fetch/ffOut_OBUFT[1]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[2]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[2]_inst_i_1, fetch/aluResult_OBUF[2]_inst_i_2, fetch/aluResult_OBUF[2]_inst_i_3, fetch/aluResult_OBUF[2]_inst_i_4, fetch/aluResult_OBUF[2]_inst_i_7, fetch/aluResult_OBUF[2]_inst_i_8, fetch/dataBus_OBUFT[2]_inst_i_1, fetch/dataBus_OBUFT[2]_inst_i_3, and fetch/ffOut_OBUFT[2]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[3]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[3]_inst_i_1, fetch/aluResult_OBUF[3]_inst_i_2, fetch/aluResult_OBUF[3]_inst_i_3, fetch/aluResult_OBUF[3]_inst_i_4, fetch/aluResult_OBUF[3]_inst_i_7, fetch/aluResult_OBUF[3]_inst_i_8, fetch/dataBus_OBUFT[3]_inst_i_1, fetch/dataBus_OBUFT[3]_inst_i_3, and fetch/ffOut_OBUFT[3]_inst_i_1.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 4 Critical Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'RuntimeOptimized' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1a91efe6b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13c59c871
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:58 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:58 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:59 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1acef13b4
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:02 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 196fabf0d
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:07 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 196fabf0d
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:07 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+Phase 2.4 Global Placement Core | Checksum: 1753f9da4
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:18 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1753f9da4
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:18 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 216d6882f
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:23 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f87043d5
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:01:28 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1277cb086
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:29 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1277cb086
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:29 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: fd9d39e1
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: fb2ba437
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:40 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: fb2ba437
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:40 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: fb2ba437
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:40 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 22822ed86
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.278 | TNS=-81397.280 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1f1bc4e88
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:25 . Memory (MB): peak = 2005.762 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1d3e21997
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:26 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 22822ed86
+
+Time (s): cpu = 00:02:51 ; elapsed = 00:02:28 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-10.205. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 222a5a95e
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:38 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:38 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 222a5a95e
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:38 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 222a5a95e
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 222a5a95e
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 222a5a95e
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2005.762 ; gain = 0.000
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c3a572fd
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+Ending Placer Task | Checksum: 125fef2e1
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.762 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 1 Warnings, 4 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:02 ; elapsed = 00:02:41 . Memory (MB): peak = 2005.762 ; gain = 23.199
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2005.762 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2005.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file Nibbler_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.191 . Memory (MB): peak = 2005.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Nibbler_utilization_placed.rpt -pb Nibbler_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Nibbler_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.315 . Memory (MB): peak = 2007.320 ; gain = 1.559
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 484.00s |  WALL: 349.48s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2040.746 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.221 | TNS=-79168.116 |
+Phase 1 Physical Synthesis Initialization | Checksum: 19c527f62
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:27 . Memory (MB): peak = 2046.539 ; gain = 5.793
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.221 | TNS=-79168.116 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 19c527f62
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:27 . Memory (MB): peak = 2046.539 ; gain = 5.793
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.221 | TNS=-79168.116 |
+INFO: [Physopt 32-702] Processed net flagsModule/flags_OBUF[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/Q[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.166 | TNS=-79167.949 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.155 | TNS=-79167.818 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[3]. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[3]_inst_i_1_comp.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.112 | TNS=-79167.730 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_6
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.054 | TNS=-79167.614 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]_inst_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_7_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_7_comp.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.953 | TNS=-79167.301 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net a/dataOut_reg_2.  Re-placed instance a/aluResult_OBUF[2]_inst_i_6
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.946 | TNS=-79167.286 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 8 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.924 | TNS=-79167.221 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_9_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_9
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.917 | TNS=-79166.988 |
+INFO: [Physopt 32-702] Processed net ram/Q[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_4_comp
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.858 | TNS=-79166.872 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[3]_inst_i_6_comp.
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.827 | TNS=-79166.806 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[2]_inst_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net a/dataOut_reg_2.  Re-placed instance a/aluResult_OBUF[2]_inst_i_6
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.800 | TNS=-79166.755 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_4_comp
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.790 | TNS=-79166.733 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[2]_inst_i_4_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[2]_inst_i_4_comp.
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.704 | TNS=-79166.566 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_3
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.668 | TNS=-79166.442 |
+INFO: [Physopt 32-702] Processed net ram/Q[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0.  Re-placed instance fetch/aluResult_OBUF[1]_inst_i_6
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.661 | TNS=-79166.428 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[1]. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[1]_inst_i_1_comp.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.654 | TNS=-79166.413 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net a/dataOut_reg_1.  Re-placed instance a/aluResult_OBUF[2]_inst_i_9
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.648 | TNS=-79166.377 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3310][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_119_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.641 | TNS=-79166.282 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_7_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_7_comp_1.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.639 | TNS=-79166.268 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_5_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_5
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.631 | TNS=-79166.239 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3039][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.627 | TNS=-79166.144 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_7_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_7_comp.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.625 | TNS=-79194.731 |
+INFO: [Physopt 32-702] Processed net ram/Q[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3043][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.597 | TNS=-79194.630 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.588 | TNS=-79194.608 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_8_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_8
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.579 | TNS=-79194.593 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.574 | TNS=-79194.579 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_4
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.567 | TNS=-79194.520 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_5_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_5
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.561 | TNS=-79194.506 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_3
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.556 | TNS=-79194.455 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3031][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.535 | TNS=-79194.331 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_71_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.532 | TNS=-79194.324 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 8 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.529 | TNS=-79194.266 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[1]_inst_i_2_n_0.  Re-placed instance fetch/aluResult_OBUF[1]_inst_i_2
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[1]_inst_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.528 | TNS=-79194.208 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3307][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_119_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.521 | TNS=-79194.142 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3310][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_56_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_120_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.520 | TNS=-79194.142 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_71_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.514 | TNS=-79193.938 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3023][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.502 | TNS=-79193.822 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[1]. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[1]_inst_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[1]_inst_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.474 | TNS=-79193.764 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_6_comp.
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.468 | TNS=-79193.705 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_7
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.464 | TNS=-79193.698 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1855][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.463 | TNS=-79193.538 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0.  Re-placed instance fetch/aluResult_OBUF[1]_inst_i_6_comp
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.439 | TNS=-79193.480 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_71_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.435 | TNS=-79193.436 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[3]_inst_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net fetch/ffOut_OBUF[3]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.428 | TNS=-79562.051 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_3
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.423 | TNS=-79562.029 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_3
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.416 | TNS=-79562.014 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_3_comp.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.397 | TNS=-79561.934 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1847][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.396 | TNS=-79561.876 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3294][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_119_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_376_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_889_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1915_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.394 | TNS=-79561.833 |
+INFO: [Physopt 32-702] Processed net fetch/ffOut_OBUF[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/ffOut_OBUF[1]. Critical path length was reduced through logic transformation on cell fetch/ffOut_OBUFT[1]_inst_i_1_comp.
+INFO: [Physopt 32-735] Processed net fetch/dataBus_OBUF[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.380 | TNS=-76424.243 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[0]_inst_i_4_comp.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.380 | TNS=-76448.596 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[2]_inst_i_4_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[2]_inst_i_4_comp_1.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.359 | TNS=-76448.530 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1851][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.348 | TNS=-76448.472 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_7
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.346 | TNS=-76448.465 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.334 | TNS=-76448.407 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_72_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.320 | TNS=-76448.305 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1847][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.316 | TNS=-76448.196 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_2_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_2
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.303 | TNS=-76448.167 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[161][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_70_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.301 | TNS=-76448.116 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_8_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_8
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.299 | TNS=-76448.116 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[2]_inst_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[2]_inst_i_2_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[2]_inst_i_2_comp.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.295 | TNS=-76476.739 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3322][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_374_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_885_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1906_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.293 | TNS=-76476.725 |
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[3]_inst_i_3_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[3]_inst_i_3_comp.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[3]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.292 | TNS=-76501.288 |
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_3
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.291 | TNS=-76501.288 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[2]_inst_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/ffOut_OBUF[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net fetch/dataBus_OBUF[2].  Re-placed instance fetch/dataBus_OBUFT[2]_inst_i_1
+INFO: [Physopt 32-735] Processed net fetch/dataBus_OBUF[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.282 | TNS=-76304.561 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_375_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_887_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1911_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.260 | TNS=-76304.539 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3314][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_884_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1904_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.257 | TNS=-76304.539 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3299][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_886_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1908_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.251 | TNS=-76304.495 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3322][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_119_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_372_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_882_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1899_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.245 | TNS=-76304.488 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_91_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.243 | TNS=-76304.459 |
+INFO: [Physopt 32-710] Processed net fetch/ffOut_OBUF[2]. Critical path length was reduced through logic transformation on cell fetch/ffOut_OBUFT[2]_inst_i_1_comp.
+INFO: [Physopt 32-735] Processed net fetch/dataBus_OBUF[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.234 | TNS=-75247.684 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[3]_inst_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.234 | TNS=-75247.677 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_120_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_376_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_889_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_1914_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.232 | TNS=-75247.634 |
+INFO: [Physopt 32-702] Processed net a/dataOut_reg_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net a/dataOut_reg_2. Critical path length was reduced through logic transformation on cell a/aluResult_OBUF[2]_inst_i_6_comp.
+INFO: [Physopt 32-735] Processed net a/dataOut_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.218 | TNS=-75247.583 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3294][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_374_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_886_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1908_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.216 | TNS=-75247.583 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3314][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_881_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1897_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.215 | TNS=-75247.583 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3023][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_91_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_263_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_664_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1464_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.214 | TNS=-75247.553 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[238][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_181_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_501_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_1138_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.210 | TNS=-75247.539 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3319][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1905_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.209 | TNS=-75247.517 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 5 pins.
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[2]_inst_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.198 | TNS=-75247.495 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[99][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_69_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.197 | TNS=-75247.466 |
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0. Critical path length was reduced through logic transformation on cell fetch/aluResult_OBUF[3]_inst_i_7_comp.
+INFO: [Physopt 32-735] Processed net fetch/ffOut_OBUF[3]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.190 | TNS=-75263.772 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_91_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.187 | TNS=-75263.764 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_373_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_884_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1903_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.187 | TNS=-75263.764 |
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_42_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_92_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_266_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_669_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_1472_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.187 | TNS=-75263.764 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[2227][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_48_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_103_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.186 | TNS=-75263.742 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3014][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_663_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1462_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.185 | TNS=-75263.742 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3325][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1907_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.184 | TNS=-75263.742 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3326][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1900_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.184 | TNS=-75263.728 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3290][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1914_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.182 | TNS=-75263.721 |
+INFO: [Physopt 32-702] Processed net ram/Q[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1250][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.182 | TNS=-75263.721 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3303][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_119_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_375_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_886_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_1909_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.173 | TNS=-75263.699 |
+INFO: [Physopt 32-702] Processed net flagsModule/flags_OBUF[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/Q[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/aluResult_OBUF[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_6_comp
+INFO: [Physopt 32-735] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.171 | TNS=-75263.553 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3290][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_119_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_374_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_886_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1907_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.168 | TNS=-75263.546 |
+INFO: [Physopt 32-702] Processed net ram/Q[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_180_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[2]_i_498_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[2]_i_1131_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.163 | TNS=-75263.517 |
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_180_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_497_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_1129_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.163 | TNS=-75263.510 |
+INFO: [Physopt 32-702] Processed net ram/Q[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_72_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.160 | TNS=-75263.510 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[99][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[1]_i_69_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1847][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[3]_i_73_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1250][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net ram/outputData_reg[0]_i_87_n_0. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[3031][3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_42_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_92_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_265_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[3]_i_666_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[1851][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+Phase 3 Critical Path Optimization | Checksum: 19c527f62
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:02:13 . Memory (MB): peak = 2072.621 ; gain = 31.875
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-702] Processed net ram/Q[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[238][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net ram/Q[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[2226][1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[1]_i_47_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_180_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_497_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_1129_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/ffOut_OBUF[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/Q[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data_reg_n_0_[240][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_31_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_180_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_497_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/outputData_reg[0]_i_1129_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net ram/data[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net fetch/ffOut_OBUF[0]. Optimizations did not improve timing on the net.
+Phase 4 Critical Path Optimization | Checksum: 19c527f62
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:02:44 . Memory (MB): peak = 2074.699 ; gain = 33.953
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 2074.699 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-9.150 | TNS=-75263.466 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          1.071  |       3904.650  |            1  |              0  |                   104  |           0  |           2  |  00:02:17  |
+|  Total          |          1.071  |       3904.650  |            1  |              0  |                   104  |           0  |           3  |  00:02:17  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2074.699 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 15752a12e
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:02:44 . Memory (MB): peak = 2074.699 ; gain = 33.953
+INFO: [Common 17-83] Releasing license: Implementation
+601 Infos, 1 Warnings, 4 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:10:45 ; elapsed = 00:08:34 . Memory (MB): peak = 2074.699 ; gain = 67.379
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.449 ; gain = 11.750
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2086.449 ; gain = 11.750
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 3 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[1]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[1]_inst_i_1_comp_1, fetch/dataBus_OBUFT[1]_inst_i_3, and fetch/ffOut_OBUFT[1]_inst_i_1_comp.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 8 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[2]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[2]_inst_i_1, fetch/aluResult_OBUF[2]_inst_i_2_comp, fetch/aluResult_OBUF[2]_inst_i_3, fetch/aluResult_OBUF[2]_inst_i_4_comp_1, fetch/aluResult_OBUF[2]_inst_i_7, fetch/dataBus_OBUFT[2]_inst_i_1, fetch/dataBus_OBUFT[2]_inst_i_3, and fetch/ffOut_OBUFT[2]_inst_i_1_comp.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[0]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[0]_inst_i_1, fetch/aluResult_OBUF[0]_inst_i_2, fetch/aluResult_OBUF[0]_inst_i_3_comp, fetch/aluResult_OBUF[0]_inst_i_4_comp, fetch/aluResult_OBUF[0]_inst_i_6_comp, fetch/aluResult_OBUF[0]_inst_i_7_comp, fetch/dataBus_OBUFT[0]_inst_i_1, fetch/dataBus_OBUFT[0]_inst_i_3, and fetch/ffOut_OBUFT[0]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[3]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[3]_inst_i_1_comp, fetch/aluResult_OBUF[3]_inst_i_2, fetch/aluResult_OBUF[3]_inst_i_3_comp, fetch/aluResult_OBUF[3]_inst_i_4_comp, fetch/aluResult_OBUF[3]_inst_i_7_comp, fetch/aluResult_OBUF[3]_inst_i_8, fetch/dataBus_OBUFT[3]_inst_i_1, fetch/dataBus_OBUFT[3]_inst_i_3, and fetch/ffOut_OBUFT[3]_inst_i_1_replica.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 4 Critical Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 2c73ff39 ConstDB: 0 ShapeSum: 9227e19a RouteDB: 0
+Post Restoration Checksum: NetGraph: db02bbbf NumContArr: 959516c1 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 17097d280
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 2230.441 ; gain = 101.629
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 17097d280
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 2235.465 ; gain = 106.652
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 17097d280
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2235.465 ; gain = 106.652
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+WARNING: [Route 35-41] Unusually high hold violations were detected on a large number of pins. This may result in high router runtime.
+Phase 2.3 Update Timing | Checksum: 1bfe9b80d
+
+Time (s): cpu = 00:05:13 ; elapsed = 00:04:04 . Memory (MB): peak = 2249.484 ; gain = 120.672
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.939 | TNS=-84931.766| WHS=-3.142 | THS=-22751.814|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.57083 %
+  Global Horizontal Routing Utilization  = 6.34686 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 17868
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 17799
+  Number of Partially Routed Nets     = 69
+  Number of Node Overlaps             = 22043
+
+Phase 2 Router Initialization | Checksum: 108bfb383
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:07:02 . Memory (MB): peak = 2255.461 ; gain = 126.648
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 108bfb383
+
+Time (s): cpu = 00:09:32 ; elapsed = 00:07:02 . Memory (MB): peak = 2255.461 ; gain = 126.648
+Phase 3 Initial Routing | Checksum: f4aa8ea8
+
+Time (s): cpu = 00:16:25 ; elapsed = 00:13:04 . Memory (MB): peak = 2754.785 ; gain = 625.973
+INFO: [Route 35-580] Design has 16389 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+=========================+
+| Launch Setup Clock | Launch Hold Clock | Pin                     |
++====================+===================+=========================+
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[1]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[3]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[0]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[2]/D |
+| nibbler_clk        | nibbler_clk       | ram/data_reg[240][3]/D  |
++--------------------+-------------------+-------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 5230
+ Number of Nodes with overlaps = 262
+ Number of Nodes with overlaps = 30
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.929| TNS=-161964.417| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1d8e4b5f8
+
+Time (s): cpu = 00:24:53 ; elapsed = 00:19:14 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.586| TNS=-160686.177| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 127fefb84
+
+Time (s): cpu = 00:25:04 ; elapsed = 00:19:26 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+Phase 4 Rip-up And Reroute | Checksum: 127fefb84
+
+Time (s): cpu = 00:25:05 ; elapsed = 00:19:26 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 127fefb84
+
+Time (s): cpu = 00:25:53 ; elapsed = 00:19:58 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.586| TNS=-160686.177| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1e7dff0da
+
+Time (s): cpu = 00:25:53 ; elapsed = 00:19:59 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1e7dff0da
+
+Time (s): cpu = 00:25:54 ; elapsed = 00:19:59 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+Phase 5 Delay and Skew Optimization | Checksum: 1e7dff0da
+
+Time (s): cpu = 00:25:54 ; elapsed = 00:19:59 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 123315c60
+
+Time (s): cpu = 00:28:43 ; elapsed = 00:21:50 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.585| TNS=-157323.331| WHS=-4.998 | THS=-455.504|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 151bcbc6b
+
+Time (s): cpu = 00:28:45 ; elapsed = 00:21:52 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+Phase 6.1 Hold Fix Iter | Checksum: 151bcbc6b
+
+Time (s): cpu = 00:28:45 ; elapsed = 00:21:52 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.585| TNS=-157323.331| WHS=-4.998 | THS=-453.446|
+
+Phase 6.2 Additional Hold Fix | Checksum: 131725b1a
+
+Time (s): cpu = 00:32:20 ; elapsed = 00:24:42 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+WARNING: [Route 35-468] The router encountered 10935 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	fetch/ffOut_OBUFT[0]_inst_i_1/I0
+	fetch/ffOut_OBUFT[3]_inst_i_1/I0
+	ram/data_reg[1000][0]/D
+	ram/data_reg[1001][0]/D
+	ram/data_reg[1002][0]/D
+	ram/data_reg[1003][0]/D
+	ram/data_reg[1004][0]/D
+	ram/data_reg[1005][0]/D
+	ram/data_reg[1006][0]/D
+	ram/data_reg[1007][0]/D
+	.. and 10925 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 18d2b9661
+
+Time (s): cpu = 00:32:20 ; elapsed = 00:24:42 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 10.846 %
+  Global Horizontal Routing Utilization  = 14.9384 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 72.973%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 81.982%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 77.9412%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 92.6471%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X41Y37 -> INT_R_X41Y37
+   INT_L_X30Y36 -> INT_L_X30Y36
+   INT_R_X39Y32 -> INT_R_X39Y32
+   INT_L_X32Y27 -> INT_L_X32Y27
+   INT_L_X32Y26 -> INT_L_X32Y26
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 1 Sparse Ratio: 0.75
+
+Phase 7 Route finalize | Checksum: 1c1ac55c7
+
+Time (s): cpu = 00:32:21 ; elapsed = 00:24:43 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1c1ac55c7
+
+Time (s): cpu = 00:32:21 ; elapsed = 00:24:43 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1fc5650d8
+
+Time (s): cpu = 00:32:23 ; elapsed = 00:24:46 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 15c138c7e
+
+Time (s): cpu = 00:34:50 ; elapsed = 00:26:20 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-16.585| TNS=-158577.343| WHS=0.101  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 15c138c7e
+
+Time (s): cpu = 00:34:50 ; elapsed = 00:26:20 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:34:50 ; elapsed = 00:26:20 . Memory (MB): peak = 4642.273 ; gain = 2513.461
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+621 Infos, 4 Warnings, 8 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:43:44 ; elapsed = 00:32:25 . Memory (MB): peak = 4642.273 ; gain = 2555.824
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4642.273 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4642.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Nibbler_drc_routed.rpt -pb Nibbler_drc_routed.pb -rpx Nibbler_drc_routed.rpx
+Command: report_drc -file Nibbler_drc_routed.rpt -pb Nibbler_drc_routed.pb -rpx Nibbler_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:04:48 ; elapsed = 00:03:07 . Memory (MB): peak = 4642.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file Nibbler_methodology_drc_routed.rpt -pb Nibbler_methodology_drc_routed.pb -rpx Nibbler_methodology_drc_routed.rpx
+Command: report_methodology -file Nibbler_methodology_drc_routed.rpt -pb Nibbler_methodology_drc_routed.pb -rpx Nibbler_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/Vivado/NibblerCPU_3/NibblerCPU_3.runs/impl_1/Nibbler_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:05:29 ; elapsed = 00:03:30 . Memory (MB): peak = 4642.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file Nibbler_power_routed.rpt -pb Nibbler_power_summary_routed.pb -rpx Nibbler_power_routed.rpx
+Command: report_power -file Nibbler_power_routed.rpt -pb Nibbler_power_summary_routed.pb -rpx Nibbler_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+633 Infos, 4 Warnings, 8 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:04:39 ; elapsed = 00:02:52 . Memory (MB): peak = 4642.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file Nibbler_route_status.rpt -pb Nibbler_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Nibbler_timing_summary_routed.rpt -pb Nibbler_timing_summary_routed.pb -rpx Nibbler_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Nibbler_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Nibbler_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Nibbler_bus_skew_routed.rpt -pb Nibbler_bus_skew_routed.pb -rpx Nibbler_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 16 21:53:31 2024...
+
+*** Running vivado
+    with args -log Nibbler.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Nibbler.tcl -notrace
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Nibbler.tcl -notrace
+Command: open_checkpoint Nibbler_routed.dcp
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.206 . Memory (MB): peak = 1279.461 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3279 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Nibbler' is not ideal for floorplanning, since the cellview 'Ram' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1538.297 ; gain = 18.934
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1538.297 ; gain = 18.934
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1538.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.1 (64-bit) build 3526262
+open_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1540.145 ; gain = 270.566
+Command: write_bitstream -force Nibbler.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC LUTLP-1] Combinatorial Loop Alert: 3 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[1]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[1]_inst_i_1_comp_1, fetch/dataBus_OBUFT[1]_inst_i_3, and fetch/ffOut_OBUFT[1]_inst_i_1_comp.
+ERROR: [DRC LUTLP-1] Combinatorial Loop Alert: 8 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[2]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[2]_inst_i_1, fetch/aluResult_OBUF[2]_inst_i_2_comp, fetch/aluResult_OBUF[2]_inst_i_3, fetch/aluResult_OBUF[2]_inst_i_4_comp_1, fetch/aluResult_OBUF[2]_inst_i_7, fetch/dataBus_OBUFT[2]_inst_i_1, fetch/dataBus_OBUFT[2]_inst_i_3, and fetch/ffOut_OBUFT[2]_inst_i_1_comp.
+ERROR: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[0]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[0]_inst_i_1, fetch/aluResult_OBUF[0]_inst_i_2, fetch/aluResult_OBUF[0]_inst_i_3_comp, fetch/aluResult_OBUF[0]_inst_i_4_comp, fetch/aluResult_OBUF[0]_inst_i_6_comp, fetch/aluResult_OBUF[0]_inst_i_7_comp, fetch/dataBus_OBUFT[0]_inst_i_1, fetch/dataBus_OBUFT[0]_inst_i_3, and fetch/ffOut_OBUFT[0]_inst_i_1.
+ERROR: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[3]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[3]_inst_i_1_comp, fetch/aluResult_OBUF[3]_inst_i_2, fetch/aluResult_OBUF[3]_inst_i_3_comp, fetch/aluResult_OBUF[3]_inst_i_4_comp, fetch/aluResult_OBUF[3]_inst_i_7_comp, fetch/aluResult_OBUF[3]_inst_i_8, fetch/dataBus_OBUFT[3]_inst_i_1, fetch/dataBus_OBUFT[3]_inst_i_3, and fetch/ffOut_OBUFT[3]_inst_i_1_replica.
+ERROR: [DRC NSTD-1] Unspecified I/O Standard: 60 out of 66 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: aPort[3:0], address[11:0], addressCon[11:0], aluResult[3:0], dataBus[3:0], ffOut[3:0], flags[1:0], instr[3:0], operand[3:0], programByte[7:0], notLoadA, and phase.
+ERROR: [DRC UCIO-1] Unconstrained Logical Port: 60 out of 66 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: aPort[3:0], address[11:0], addressCon[11:0], aluResult[3:0], dataBus[3:0], ffOut[3:0], flags[1:0], instr[3:0], operand[3:0], programByte[7:0], notLoadA, and phase.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/E[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3361][3]_i_1/O, cell fetch/data_reg[3361][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/instr_reg[3]_0 is a gated clock net sourced by a combinational pin fetch/outputData_reg[3]_i_2/O, cell fetch/outputData_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[0]_rep__0_2[0] is a gated clock net sourced by a combinational pin fetch/data_reg[550][3]_i_1/O, cell fetch/data_reg[550][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_10[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3352][3]_i_1/O, cell fetch/data_reg[3352][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_11[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3351][3]_i_1/O, cell fetch/data_reg[3351][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_12[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3350][3]_i_1/O, cell fetch/data_reg[3350][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_13[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3349][3]_i_1/O, cell fetch/data_reg[3349][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_14[0] is a gated clock net sourced by a combinational pin fetch/data_reg[2048][3]_i_1/O, cell fetch/data_reg[2048][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_2[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3360][3]_i_1/O, cell fetch/data_reg[3360][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_3[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3359][3]_i_1/O, cell fetch/data_reg[3359][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_4[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3358][3]_i_1/O, cell fetch/data_reg[3358][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_5[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3357][3]_i_1/O, cell fetch/data_reg[3357][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_6[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3356][3]_i_1/O, cell fetch/data_reg[3356][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_7[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3355][3]_i_1/O, cell fetch/data_reg[3355][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_8[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3354][3]_i_1/O, cell fetch/data_reg[3354][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__0_9[0] is a gated clock net sourced by a combinational pin fetch/data_reg[3353][3]_i_1/O, cell fetch/data_reg[3353][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_10[0] is a gated clock net sourced by a combinational pin fetch/data_reg[873][3]_i_1/O, cell fetch/data_reg[873][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_11[0] is a gated clock net sourced by a combinational pin fetch/data_reg[801][3]_i_1/O, cell fetch/data_reg[801][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_12[0] is a gated clock net sourced by a combinational pin fetch/data_reg[865][3]_i_1/O, cell fetch/data_reg[865][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_13[0] is a gated clock net sourced by a combinational pin fetch/data_reg[808][3]_i_1/O, cell fetch/data_reg[808][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_14[0] is a gated clock net sourced by a combinational pin fetch/data_reg[872][3]_i_1/O, cell fetch/data_reg[872][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_15[0] is a gated clock net sourced by a combinational pin fetch/data_reg[862][3]_i_1/O, cell fetch/data_reg[862][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_16[0] is a gated clock net sourced by a combinational pin fetch/data_reg[870][3]_i_1/O, cell fetch/data_reg[870][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_17[0] is a gated clock net sourced by a combinational pin fetch/data_reg[878][3]_i_1/O, cell fetch/data_reg[878][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_18[0] is a gated clock net sourced by a combinational pin fetch/data_reg[813][3]_i_1/O, cell fetch/data_reg[813][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_19[0] is a gated clock net sourced by a combinational pin fetch/data_reg[877][3]_i_1/O, cell fetch/data_reg[877][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_20[0] is a gated clock net sourced by a combinational pin fetch/data_reg[805][3]_i_1/O, cell fetch/data_reg[805][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_21[0] is a gated clock net sourced by a combinational pin fetch/data_reg[797][3]_i_1/O, cell fetch/data_reg[797][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_22[0] is a gated clock net sourced by a combinational pin fetch/data_reg[861][3]_i_1/O, cell fetch/data_reg[861][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_23[0] is a gated clock net sourced by a combinational pin fetch/data_reg[812][3]_i_1/O, cell fetch/data_reg[812][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_24[0] is a gated clock net sourced by a combinational pin fetch/data_reg[876][3]_i_1/O, cell fetch/data_reg[876][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_2[0] is a gated clock net sourced by a combinational pin fetch/data_reg[858][3]_i_1/O, cell fetch/data_reg[858][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_3[0] is a gated clock net sourced by a combinational pin fetch/data_reg[802][3]_i_1/O, cell fetch/data_reg[802][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_4[0] is a gated clock net sourced by a combinational pin fetch/data_reg[866][3]_i_1/O, cell fetch/data_reg[866][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_5[0] is a gated clock net sourced by a combinational pin fetch/data_reg[874][3]_i_1/O, cell fetch/data_reg[874][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_6[0] is a gated clock net sourced by a combinational pin fetch/data_reg[859][3]_i_1/O, cell fetch/data_reg[859][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_7[0] is a gated clock net sourced by a combinational pin fetch/data_reg[811][3]_i_1/O, cell fetch/data_reg[811][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_8[0] is a gated clock net sourced by a combinational pin fetch/data_reg[875][3]_i_1/O, cell fetch/data_reg[875][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__1_9[0] is a gated clock net sourced by a combinational pin fetch/data_reg[809][3]_i_1/O, cell fetch/data_reg[809][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_0[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1346][3]_i_1/O, cell fetch/data_reg[1346][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_10[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1365][3]_i_1/O, cell fetch/data_reg[1365][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_11[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1367][3]_i_1/O, cell fetch/data_reg[1367][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_12[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1280][3]_i_1/O, cell fetch/data_reg[1280][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_13[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1281][3]_i_1/O, cell fetch/data_reg[1281][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_14[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1282][3]_i_1/O, cell fetch/data_reg[1282][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_15[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1283][3]_i_1/O, cell fetch/data_reg[1283][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_16[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1284][3]_i_1/O, cell fetch/data_reg[1284][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_17[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1292][3]_i_1/O, cell fetch/data_reg[1292][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_18[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1294][3]_i_1/O, cell fetch/data_reg[1294][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_19[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1295][3]_i_1/O, cell fetch/data_reg[1295][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_1[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1348][3]_i_1/O, cell fetch/data_reg[1348][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_20[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1298][3]_i_1/O, cell fetch/data_reg[1298][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_21[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1300][3]_i_1/O, cell fetch/data_reg[1300][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_22[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1301][3]_i_1/O, cell fetch/data_reg[1301][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_23[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1303][3]_i_1/O, cell fetch/data_reg[1303][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_24[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1305][3]_i_1/O, cell fetch/data_reg[1305][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_25[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1307][3]_i_1/O, cell fetch/data_reg[1307][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_26[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1308][3]_i_1/O, cell fetch/data_reg[1308][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_27[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1309][3]_i_1/O, cell fetch/data_reg[1309][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_28[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1310][3]_i_1/O, cell fetch/data_reg[1310][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_29[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1311][3]_i_1/O, cell fetch/data_reg[1311][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_2[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1349][3]_i_1/O, cell fetch/data_reg[1349][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_30[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1312][3]_i_1/O, cell fetch/data_reg[1312][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_31[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1313][3]_i_1/O, cell fetch/data_reg[1313][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_32[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1314][3]_i_1/O, cell fetch/data_reg[1314][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_33[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1316][3]_i_1/O, cell fetch/data_reg[1316][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_34[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1317][3]_i_1/O, cell fetch/data_reg[1317][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_35[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1318][3]_i_1/O, cell fetch/data_reg[1318][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_36[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1320][3]_i_1/O, cell fetch/data_reg[1320][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_37[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1321][3]_i_1/O, cell fetch/data_reg[1321][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_38[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1322][3]_i_1/O, cell fetch/data_reg[1322][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_39[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1323][3]_i_1/O, cell fetch/data_reg[1323][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_3[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1353][3]_i_1/O, cell fetch/data_reg[1353][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_40[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1324][3]_i_1/O, cell fetch/data_reg[1324][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_41[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1325][3]_i_1/O, cell fetch/data_reg[1325][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_42[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1326][3]_i_1/O, cell fetch/data_reg[1326][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_43[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1327][3]_i_1/O, cell fetch/data_reg[1327][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_44[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1328][3]_i_1/O, cell fetch/data_reg[1328][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_45[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1329][3]_i_1/O, cell fetch/data_reg[1329][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_46[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1331][3]_i_1/O, cell fetch/data_reg[1331][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_47[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1332][3]_i_1/O, cell fetch/data_reg[1332][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_48[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1334][3]_i_1/O, cell fetch/data_reg[1334][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_49[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1335][3]_i_1/O, cell fetch/data_reg[1335][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_4[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1354][3]_i_1/O, cell fetch/data_reg[1354][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_50[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1336][3]_i_1/O, cell fetch/data_reg[1336][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_51[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1338][3]_i_1/O, cell fetch/data_reg[1338][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_52[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1339][3]_i_1/O, cell fetch/data_reg[1339][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_53[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1340][3]_i_1/O, cell fetch/data_reg[1340][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_54[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1341][3]_i_1/O, cell fetch/data_reg[1341][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_55[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1342][3]_i_1/O, cell fetch/data_reg[1342][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_56[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1343][3]_i_1/O, cell fetch/data_reg[1343][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_5[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1355][3]_i_1/O, cell fetch/data_reg[1355][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_6[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1357][3]_i_1/O, cell fetch/data_reg[1357][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_7[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1359][3]_i_1/O, cell fetch/data_reg[1359][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_8[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1361][3]_i_1/O, cell fetch/data_reg[1361][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[1]_rep__2_9[0] is a gated clock net sourced by a combinational pin fetch/data_reg[1362][3]_i_1/O, cell fetch/data_reg[1362][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[2]_10[0] is a gated clock net sourced by a combinational pin fetch/data_reg[2533][3]_i_1/O, cell fetch/data_reg[2533][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[2]_11[0] is a gated clock net sourced by a combinational pin fetch/data_reg[2534][3]_i_1/O, cell fetch/data_reg[2534][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[2]_12[0] is a gated clock net sourced by a combinational pin fetch/data_reg[2535][3]_i_1/O, cell fetch/data_reg[2535][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net fetch/operand_reg[2]_13[0] is a gated clock net sourced by a combinational pin fetch/data_reg[2536][3]_i_1/O, cell fetch/data_reg[2536][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Common 17-14] Message 'DRC PDRC-153' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 6 Errors, 4098 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+20 Infos, 102 Warnings, 0 Critical Warnings and 7 Errors encountered.
+write_bitstream failed
+write_bitstream: Time (s): cpu = 00:05:12 ; elapsed = 00:03:11 . Memory (MB): peak = 1833.055 ; gain = 292.910
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 16 21:58:08 2024...

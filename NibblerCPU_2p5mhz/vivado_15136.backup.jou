@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Nov 16 22:14:18 2024
+# Process ID: 15136
+# Current directory: D:/Vivado/NibblerCPU_2p5mhz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4700 D:\Vivado\NibblerCPU_2p5mhz\NibblerCPU_2p5mhz.xpr
+# Log file: D:/Vivado/NibblerCPU_2p5mhz/vivado.log
+# Journal file: D:/Vivado/NibblerCPU_2p5mhz\vivado.jou
+# Running On: LAPTOP-7N4AO7HD, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/NibblerCPU_2p5mhz/NibblerCPU_2p5mhz.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+set_property IS_ENABLED false [get_report_config -of_object [get_runs impl_1] impl_1_opt_report_drc_0]
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_project D:/Vivado/NibblerCPU_3/NibblerCPU_3.xpr
+update_compile_order -fileset sources_1
+current_project NibblerCPU_2p5mhz
+reset_run impl_1
+current_project NibblerCPU_3
+close_project

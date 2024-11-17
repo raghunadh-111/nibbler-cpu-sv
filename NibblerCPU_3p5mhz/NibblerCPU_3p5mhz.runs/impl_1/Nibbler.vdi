@@ -1,0 +1,856 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 17 00:42:58 2024
+# Process ID: 19196
+# Current directory: D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1
+# Command line: vivado.exe -log Nibbler.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Nibbler.tcl -notrace
+# Log file: D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler.vdi
+# Journal file: D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1\vivado.jou
+# Running On: LAPTOP-7N4AO7HD, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8464 MB
+#-----------------------------------------------------------
+source Nibbler.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1274.547 ; gain = 9.348
+Command: link_design -top Nibbler -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.281 . Memory (MB): peak = 1274.547 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3279 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Nibbler' is not ideal for floorplanning, since the cellview 'Ram' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.srcs/constrs_1/new/NibblerSDC.xdc]
+Finished Parsing XDC File [D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.srcs/constrs_1/new/NibblerSDC.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1274.547 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1274.547 ; gain = 0.000
+Command: opt_design -directive RuntimeOptimized
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1274.547 ; gain = 0.000
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[0]_inst_i_2 into driver instance fetch/dataBus_OBUFT[0]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[1]_inst_i_2 into driver instance fetch/dataBus_OBUFT[1]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[2]_inst_i_2 into driver instance fetch/dataBus_OBUFT[2]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/dataBus_OBUFT[3]_inst_i_2 into driver instance fetch/dataBus_OBUFT[3]_inst_i_5, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter fetch/ffOut_OBUFT[3]_inst_i_2 into driver instance fetch/ffOut_OBUFT[3]_inst_i_3, which resulted in an inversion of 1 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1be9cab83
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 5 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1be9cab83
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-389] Phase Sweep created 9 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 251f7a2be
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               5  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               9  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1781.035 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1ff48afba
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1781.035 ; gain = 506.488
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1781.035 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1ff48afba
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1781.035 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+29 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1781.035 ; gain = 506.488
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.116 . Memory (MB): peak = 1781.035 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Nibbler_drc_opted.rpt -pb Nibbler_drc_opted.pb -rpx Nibbler_drc_opted.rpx
+Command: report_drc -file Nibbler_drc_opted.rpt -pb Nibbler_drc_opted.pb -rpx Nibbler_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:43:30 ; elapsed = 00:27:33 . Memory (MB): peak = 1991.816 ; gain = 210.781
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Nibbler_timing_summary_opted.rpt -pb Nibbler_timing_summary_opted.pb -rpx Nibbler_timing_summary_opted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: place_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 12 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is a/dataOut_reg_1. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[0]_inst_i_1, fetch/aluResult_OBUF[0]_inst_i_2, fetch/aluResult_OBUF[0]_inst_i_3, fetch/aluResult_OBUF[0]_inst_i_4, fetch/aluResult_OBUF[0]_inst_i_6, fetch/aluResult_OBUF[0]_inst_i_7, fetch/aluResult_OBUF[0]_inst_i_8, fetch/aluResult_OBUF[0]_inst_i_9, a/aluResult_OBUF[2]_inst_i_9, fetch/dataBus_OBUFT[0]_inst_i_1, fetch/dataBus_OBUFT[0]_inst_i_3, and fetch/ffOut_OBUFT[0]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[1]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[1]_inst_i_1, fetch/aluResult_OBUF[1]_inst_i_4, fetch/aluResult_OBUF[1]_inst_i_6, fetch/dataBus_OBUFT[1]_inst_i_1, fetch/dataBus_OBUFT[1]_inst_i_3, and fetch/ffOut_OBUFT[1]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[2]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[2]_inst_i_1, fetch/aluResult_OBUF[2]_inst_i_2, fetch/aluResult_OBUF[2]_inst_i_3, fetch/aluResult_OBUF[2]_inst_i_4, fetch/aluResult_OBUF[2]_inst_i_7, fetch/aluResult_OBUF[2]_inst_i_8, fetch/dataBus_OBUFT[2]_inst_i_1, fetch/dataBus_OBUFT[2]_inst_i_3, and fetch/ffOut_OBUFT[2]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[3]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[3]_inst_i_1, fetch/aluResult_OBUF[3]_inst_i_2, fetch/aluResult_OBUF[3]_inst_i_3, fetch/aluResult_OBUF[3]_inst_i_4, fetch/aluResult_OBUF[3]_inst_i_7, fetch/aluResult_OBUF[3]_inst_i_8, fetch/dataBus_OBUFT[3]_inst_i_1, fetch/dataBus_OBUFT[3]_inst_i_3, and fetch/ffOut_OBUFT[3]_inst_i_1.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 4 Critical Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'RuntimeOptimized' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1a91efe6b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13c59c871
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:06 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:06 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 19a0b5cbd
+
+Time (s): cpu = 00:02:53 ; elapsed = 00:02:06 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 17b96d362
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:13 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e1aa0f4f
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:02:20 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1e1aa0f4f
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:02:21 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+Phase 2.4 Global Placement Core | Checksum: 2350e38f2
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:02:38 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 2350e38f2
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:02:38 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1e7b233f4
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1991cb91c
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:51 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1968d6c9f
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:51 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1968d6c9f
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:51 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1b2731975
+
+Time (s): cpu = 00:03:40 ; elapsed = 00:03:04 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 176708d74
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:03:07 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 176708d74
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:03:07 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 176708d74
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:03:07 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 282899df3
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.085 | TNS=-86764.681 |
+Phase 1 Physical Synthesis Initialization | Checksum: 238a59bba
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2015.113 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1e75f7cd2
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 282899df3
+
+Time (s): cpu = 00:05:39 ; elapsed = 00:04:31 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-11.460. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 29590e529
+
+Time (s): cpu = 00:05:52 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Time (s): cpu = 00:05:52 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 29590e529
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 29590e529
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 29590e529
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 29590e529
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2015.113 ; gain = 0.000
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:45 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23690aec8
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:46 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Ending Placer Task | Checksum: 157fe8f2e
+
+Time (s): cpu = 00:05:53 ; elapsed = 00:04:46 . Memory (MB): peak = 2015.113 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 1 Warnings, 4 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:05:55 ; elapsed = 00:04:48 . Memory (MB): peak = 2015.113 ; gain = 23.297
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2015.113 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2015.113 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file Nibbler_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 2015.113 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Nibbler_utilization_placed.rpt -pb Nibbler_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Nibbler_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.378 . Memory (MB): peak = 2015.113 ; gain = 0.000
+Command: phys_opt_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: RuntimeOptimized
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 958.00s |  WALL: 644.36s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2032.887 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.460 | TNS=-82763.843 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d4ea0449
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:46 . Memory (MB): peak = 2038.703 ; gain = 5.816
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.460 | TNS=-82763.843 |
+
+Phase 2 Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 4 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net fetch/ffOut_OBUF[0]. Replicated 1 times.
+INFO: [Physopt 32-572] Net fetch/ffOut_OBUF[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/ffOut_OBUF[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/ffOut_OBUF[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-232] Optimized 1 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 4 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.018 | TNS=-82652.041 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 2038.703 ; gain = 0.000
+Phase 2 Fanout Optimization | Checksum: 23668e677
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:03 . Memory (MB): peak = 2038.703 ; gain = 5.816
+
+Phase 3 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 14 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-572] Net fetch/ffOut_OBUF[0]_repN was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net a/dataOut_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/aluResult_OBUF[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/dataBus_OBUF[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/notReset was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net a/dataOut_reg_2 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-601] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0. Net driver fetch/aluResult_OBUF[3]_inst_i_6 was replaced.
+INFO: [Physopt 32-601] Processed net fetch/aluResult_OBUF[0]_inst_i_8_n_0. Net driver fetch/aluResult_OBUF[0]_inst_i_8 was replaced.
+INFO: [Physopt 32-572] Net fetch/aluResult_OBUF[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/aluResult_OBUF[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/dataBus_OBUF[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/dataBus_OBUF[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net fetch/dataBus_OBUF[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-232] Optimized 2 nets. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.939 | TNS=-82651.801 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2038.703 ; gain = 0.000
+Phase 3 Critical Cell Optimization | Checksum: 266f24a3a
+
+Time (s): cpu = 00:01:49 ; elapsed = 00:01:25 . Memory (MB): peak = 2038.703 ; gain = 5.816
+
+Phase 4 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 100 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net fetch/ffOut_OBUF[0]_repN.  Did not re-place instance fetch/ffOut_OBUFT[0]_inst_i_1_replica
+INFO: [Physopt 32-662] Processed net a/dataOut_reg_1.  Did not re-place instance a/aluResult_OBUF[2]_inst_i_9
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[0].  Did not re-place instance fetch/aluResult_OBUF[0]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/dataBus_OBUF[0].  Did not re-place instance fetch/dataBus_OBUFT[0]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/notReset.  Did not re-place instance fetch/flagsOut_i_1
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[0]_inst_i_6_n_0.  Did not re-place instance fetch/aluResult_OBUF[0]_inst_i_6
+INFO: [Physopt 32-662] Processed net fetch/dataBus_OBUFT[0]_inst_i_3_n_0.  Did not re-place instance fetch/dataBus_OBUFT[0]_inst_i_3
+INFO: [Physopt 32-663] Processed net flagsModule/flagsOut_reg_lopt_replica_1.  Re-placed instance flagsModule/flagsOut_reg_lopt_replica
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_2_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_2
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_8_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_8
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_3
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[0]_inst_i_7_n_0.  Did not re-place instance fetch/aluResult_OBUF[0]_inst_i_7
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[0]_inst_i_4_n_0.  Re-placed instance fetch/aluResult_OBUF[0]_inst_i_4
+INFO: [Physopt 32-662] Processed net a/dataOut_reg_2.  Did not re-place instance a/aluResult_OBUF[2]_inst_i_6
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[2].  Did not re-place instance fetch/aluResult_OBUF[2]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[2]_inst_i_4_n_0.  Did not re-place instance fetch/aluResult_OBUF[2]_inst_i_4
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3]_inst_i_6_n_0.  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_6
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3].  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3]_inst_i_4_n_0.  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_4
+INFO: [Physopt 32-663] Processed net fetch/ffOut_OBUF[0].  Re-placed instance fetch/ffOut_OBUFT[0]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[0]_inst_i_9_n_0.  Did not re-place instance fetch/aluResult_OBUF[0]_inst_i_9
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[1].  Did not re-place instance fetch/aluResult_OBUF[1]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[1]_inst_i_6_n_0.  Did not re-place instance fetch/aluResult_OBUF[1]_inst_i_6
+INFO: [Physopt 32-662] Processed net flagsModule/flags_OBUF[0].  Did not re-place instance flagsModule/flagsOut_reg
+INFO: [Physopt 32-663] Processed net fetch/ffOut_OBUF[2].  Re-placed instance fetch/ffOut_OBUFT[2]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/dataBus_OBUF[2].  Did not re-place instance fetch/dataBus_OBUFT[2]_inst_i_1
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_8_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_8
+INFO: [Physopt 32-663] Processed net fetch/dataBus_OBUFT[2]_inst_i_3_n_0.  Re-placed instance fetch/dataBus_OBUFT[2]_inst_i_3
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[1]_inst_i_2_n_0.  Re-placed instance fetch/aluResult_OBUF[1]_inst_i_2
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3]_inst_i_5_n_0.  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_5
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_5_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_5
+INFO: [Physopt 32-662] Processed net fetch/dataOut_reg.  Did not re-place instance fetch/dataOut_i_1
+INFO: [Physopt 32-662] Processed net a/aPort_OBUF[0].  Did not re-place instance a/dataOut_reg
+INFO: [Physopt 32-662] Processed net fetch/ffOut_OBUF[1].  Did not re-place instance fetch/ffOut_OBUFT[1]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/dataBus_OBUF[1].  Did not re-place instance fetch/dataBus_OBUFT[1]_inst_i_1
+INFO: [Physopt 32-663] Processed net fetch/dataBus_OBUFT[1]_inst_i_3_n_0.  Re-placed instance fetch/dataBus_OBUFT[1]_inst_i_3
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[1]_inst_i_4_n_0.  Re-placed instance fetch/aluResult_OBUF[1]_inst_i_4
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_3_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_3
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[2]_inst_i_2_n_0.  Did not re-place instance fetch/aluResult_OBUF[2]_inst_i_2
+INFO: [Physopt 32-662] Processed net fetch/ffOut_OBUF[3].  Did not re-place instance fetch/ffOut_OBUFT[3]_inst_i_1
+INFO: [Physopt 32-662] Processed net fetch/dataBus_OBUF[3].  Did not re-place instance fetch/dataBus_OBUFT[3]_inst_i_1
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_2_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_2
+INFO: [Physopt 32-663] Processed net fetch/dataBus_OBUFT[3]_inst_i_3_n_0.  Re-placed instance fetch/dataBus_OBUFT[3]_inst_i_3
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[3]_inst_i_8_n_0.  Re-placed instance fetch/aluResult_OBUF[3]_inst_i_8
+INFO: [Physopt 32-663] Processed net fetch/aluResult_OBUF[2]_inst_i_7_n_0.  Re-placed instance fetch/aluResult_OBUF[2]_inst_i_7
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1200_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1200
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_6_n_0.  Did not re-place instance ram/outputData_reg[3]_i_6
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_76_n_0.  Did not re-place instance ram/outputData_reg[3]_i_76
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1104_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1104
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_4_n_0.  Did not re-place instance ram/outputData_reg[1]_i_4
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_69_n_0.  Did not re-place instance ram/outputData_reg[1]_i_69
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1134_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1134
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_71_n_0.  Did not re-place instance ram/outputData_reg[1]_i_71
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3]_inst_i_3_n_0.  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_3
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1133_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1133
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1102_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1102
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_4_n_0.  Did not re-place instance ram/outputData_reg[2]_i_4
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_69_n_0.  Did not re-place instance ram/outputData_reg[2]_i_69
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1410_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1410
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_6_n_0.  Did not re-place instance ram/outputData_reg[1]_i_6
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_88_n_0.  Did not re-place instance ram/outputData_reg[1]_i_88
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1121_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1121
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_59_n_0.  Did not re-place instance ram/outputData_reg[1]_i_59
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_70_n_0.  Did not re-place instance ram/outputData_reg[1]_i_70
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_943_n_0.  Did not re-place instance ram/outputData_reg[1]_i_943
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1201_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1201
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1460_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1460
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_91_n_0.  Did not re-place instance ram/outputData_reg[1]_i_91
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_103_n_0.  Did not re-place instance ram/outputData_reg[3]_i_103
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1635_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1635
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_7_n_0.  Did not re-place instance ram/outputData_reg[3]_i_7
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1409_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1409
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_6_n_0.  Did not re-place instance ram/outputData_reg[2]_i_6
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_88_n_0.  Did not re-place instance ram/outputData_reg[2]_i_88
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1203_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1203
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1119_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1119
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_70_n_0.  Did not re-place instance ram/outputData_reg[2]_i_70
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[0]_i_1199_n_0.  Did not re-place instance ram/outputData_reg[0]_i_1199
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[0]_i_5_n_0.  Did not re-place instance ram/outputData_reg[0]_i_5
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[0]_i_75_n_0.  Did not re-place instance ram/outputData_reg[0]_i_75
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1106_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1106
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_5_n_0.  Did not re-place instance ram/outputData_reg[3]_i_5
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_70_n_0.  Did not re-place instance ram/outputData_reg[3]_i_70
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1164_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1164
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_5_n_0.  Did not re-place instance ram/outputData_reg[2]_i_5
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_73_n_0.  Did not re-place instance ram/outputData_reg[2]_i_73
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1410_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1410
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1202_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1202
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_942_n_0.  Did not re-place instance ram/outputData_reg[1]_i_942
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1102_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1102
+INFO: [Physopt 32-662] Processed net fetch/aluResult_OBUF[3]_inst_i_7_n_0.  Did not re-place instance fetch/aluResult_OBUF[3]_inst_i_7
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1633_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1633
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1204_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1204
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1132_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1132
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_71_n_0.  Did not re-place instance ram/outputData_reg[2]_i_71
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[3]_i_1636_n_0.  Did not re-place instance ram/outputData_reg[3]_i_1636
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_941_n_0.  Did not re-place instance ram/outputData_reg[1]_i_941
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_1195_n_0.  Did not re-place instance ram/outputData_reg[2]_i_1195
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[2]_i_75_n_0.  Did not re-place instance ram/outputData_reg[2]_i_75
+INFO: [Physopt 32-662] Processed net ram/outputData_reg[1]_i_1411_n_0.  Did not re-place instance ram/outputData_reg[1]_i_1411
+INFO: [Physopt 32-661] Optimized 18 nets.  Re-placed 18 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 18 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 18 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.816 | TNS=-81537.037 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2038.703 ; gain = 0.000
+Phase 4 Single Cell Placement Optimization | Checksum: 271d41346
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:16 . Memory (MB): peak = 2038.703 ; gain = 5.816
+
+Phase 5 BRAM Enable Optimization
+Phase 5 BRAM Enable Optimization | Checksum: 271d41346
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:16 . Memory (MB): peak = 2038.703 ; gain = 5.816
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2038.703 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-10.816 | TNS=-81537.037 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                  |          0.442  |        111.802  |            0  |              0  |                     1  |           0  |           1  |  00:00:17  |
+|  Critical Cell           |          0.079  |          0.240  |            0  |              0  |                     2  |           0  |           1  |  00:00:22  |
+|  Single Cell Placement   |          0.123  |       1114.764  |            0  |              0  |                    18  |           0  |           1  |  00:00:51  |
+|  BRAM Enable             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                   |          0.644  |       1226.807  |            0  |              0  |                    21  |           0  |           4  |  00:01:30  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2038.703 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 28924d072
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:02:16 . Memory (MB): peak = 2038.703 ; gain = 5.816
+INFO: [Common 17-83] Releasing license: Implementation
+199 Infos, 1 Warnings, 4 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:18:39 ; elapsed = 00:13:01 . Memory (MB): peak = 2038.703 ; gain = 23.590
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2049.680 ; gain = 10.977
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2049.680 ; gain = 10.977
+Command: route_design -directive RuntimeOptimized
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 13 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is a/dataOut_reg_1. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[0]_inst_i_1, fetch/aluResult_OBUF[0]_inst_i_2, fetch/aluResult_OBUF[0]_inst_i_3, fetch/aluResult_OBUF[0]_inst_i_4, fetch/aluResult_OBUF[0]_inst_i_6, fetch/aluResult_OBUF[0]_inst_i_7, fetch/aluResult_OBUF[0]_inst_i_8, fetch/aluResult_OBUF[0]_inst_i_9, a/aluResult_OBUF[2]_inst_i_9, fetch/dataBus_OBUFT[0]_inst_i_1, fetch/dataBus_OBUFT[0]_inst_i_3, fetch/ffOut_OBUFT[0]_inst_i_1, and fetch/ffOut_OBUFT[0]_inst_i_1_replica.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 6 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[1]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[1]_inst_i_1, fetch/aluResult_OBUF[1]_inst_i_4, fetch/aluResult_OBUF[1]_inst_i_6, fetch/dataBus_OBUFT[1]_inst_i_1, fetch/dataBus_OBUFT[1]_inst_i_3, and fetch/ffOut_OBUFT[1]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[2]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[2]_inst_i_1, fetch/aluResult_OBUF[2]_inst_i_2, fetch/aluResult_OBUF[2]_inst_i_3, fetch/aluResult_OBUF[2]_inst_i_4, fetch/aluResult_OBUF[2]_inst_i_7, fetch/aluResult_OBUF[2]_inst_i_8, fetch/dataBus_OBUFT[2]_inst_i_1, fetch/dataBus_OBUFT[2]_inst_i_3, and fetch/ffOut_OBUFT[2]_inst_i_1.
+CRITICAL WARNING: [DRC LUTLP-1] Combinatorial Loop Alert: 9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is fetch/aluResult_OBUF[3]. Please evaluate your design. The cells in the loop are: fetch/aluResult_OBUF[3]_inst_i_1, fetch/aluResult_OBUF[3]_inst_i_2, fetch/aluResult_OBUF[3]_inst_i_3, fetch/aluResult_OBUF[3]_inst_i_4, fetch/aluResult_OBUF[3]_inst_i_7, fetch/aluResult_OBUF[3]_inst_i_8, fetch/dataBus_OBUFT[3]_inst_i_1, fetch/dataBus_OBUFT[3]_inst_i_3, and fetch/ffOut_OBUFT[3]_inst_i_1.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 4 Critical Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: fc73ddcf ConstDB: 0 ShapeSum: 9227e19a RouteDB: 0
+Post Restoration Checksum: NetGraph: 2dc3932c NumContArr: 1d70670f Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 4b33fa3b
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2203.449 ; gain = 111.520
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 4b33fa3b
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2208.414 ; gain = 116.484
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 4b33fa3b
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2208.414 ; gain = 116.484
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1cda8ae48
+
+Time (s): cpu = 00:07:29 ; elapsed = 00:05:16 . Memory (MB): peak = 2222.520 ; gain = 130.590
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.494| TNS=-92228.154| WHS=-2.689 | THS=-21266.709|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.53365 %
+  Global Horizontal Routing Utilization  = 6.22853 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 17867
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 17798
+  Number of Partially Routed Nets     = 69
+  Number of Node Overlaps             = 22168
+
+Phase 2 Router Initialization | Checksum: 209fdb1e3
+
+Time (s): cpu = 00:13:57 ; elapsed = 00:09:26 . Memory (MB): peak = 2223.453 ; gain = 131.523
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 209fdb1e3
+
+Time (s): cpu = 00:13:57 ; elapsed = 00:09:26 . Memory (MB): peak = 2223.453 ; gain = 131.523
+Phase 3 Initial Routing | Checksum: 1e9e4ad1b
+
+Time (s): cpu = 00:15:29 ; elapsed = 00:10:28 . Memory (MB): peak = 2483.145 ; gain = 391.215
+INFO: [Route 35-580] Design has 16389 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+=========================+
+| Launch Setup Clock | Launch Hold Clock | Pin                     |
++====================+===================+=========================+
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[2]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[3]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[0]/D |
+| nibbler_clk        | nibbler_clk       | ram/outputData_reg[1]/D |
+| nibbler_clk        | nibbler_clk       | ram/data_reg[240][0]/D  |
++--------------------+-------------------+-------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 5019
+ Number of Nodes with overlaps = 935
+ Number of Nodes with overlaps = 325
+ Number of Nodes with overlaps = 169
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-17.064| TNS=-153400.382| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 17d2e49b4
+
+Time (s): cpu = 00:25:33 ; elapsed = 00:18:13 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+Phase 4 Rip-up And Reroute | Checksum: 17d2e49b4
+
+Time (s): cpu = 00:25:33 ; elapsed = 00:18:13 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1c59dcc7b
+
+Time (s): cpu = 00:25:34 ; elapsed = 00:18:13 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1c59dcc7b
+
+Time (s): cpu = 00:25:34 ; elapsed = 00:18:14 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+Phase 5 Delay and Skew Optimization | Checksum: 1c59dcc7b
+
+Time (s): cpu = 00:25:34 ; elapsed = 00:18:14 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: fc6d033c
+
+Time (s): cpu = 00:31:56 ; elapsed = 00:22:13 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-17.057| TNS=-151835.469| WHS=-1.758 | THS=-204.734|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 1df116a1a
+
+Time (s): cpu = 00:32:12 ; elapsed = 00:22:26 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+Phase 6.1 Hold Fix Iter | Checksum: 1df116a1a
+
+Time (s): cpu = 00:32:12 ; elapsed = 00:22:26 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-17.057| TNS=-151835.469| WHS=-1.758 | THS=-173.610|
+
+Phase 6.2 Additional Hold Fix | Checksum: 138917974
+
+Time (s): cpu = 00:41:42 ; elapsed = 00:29:30 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+WARNING: [Route 35-468] The router encountered 10187 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	fetch/ffOut_OBUFT[0]_inst_i_1/I0
+	fetch/ffOut_OBUFT[1]_inst_i_1/I0
+	fetch/ffOut_OBUFT[2]_inst_i_1/I0
+	fetch/ffOut_OBUFT[3]_inst_i_1/I0
+	ram/data_reg[1000][0]/D
+	ram/data_reg[1001][0]/D
+	ram/data_reg[1002][0]/D
+	ram/data_reg[1003][0]/D
+	ram/data_reg[1004][0]/D
+	ram/data_reg[1005][0]/D
+	.. and 10177 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 736ea6a1
+
+Time (s): cpu = 00:41:43 ; elapsed = 00:29:30 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 11.4641 %
+  Global Horizontal Routing Utilization  = 15.1606 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 85.5856%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X32Y24 -> INT_L_X32Y24
+East Dir 1x1 Area, Max Cong = 76.4706%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 95.5882%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X35Y30 -> INT_R_X35Y30
+   INT_L_X38Y30 -> INT_L_X38Y30
+   INT_L_X40Y26 -> INT_L_X40Y26
+   INT_L_X38Y19 -> INT_L_X38Y19
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+
+Phase 7 Route finalize | Checksum: 127284f55
+
+Time (s): cpu = 00:41:43 ; elapsed = 00:29:30 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 127284f55
+
+Time (s): cpu = 00:41:43 ; elapsed = 00:29:31 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a7c78eab
+
+Time (s): cpu = 00:41:45 ; elapsed = 00:29:34 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 1c9e30d94
+
+Time (s): cpu = 00:46:12 ; elapsed = 00:32:14 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-17.057| TNS=-153089.510| WHS=0.017  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1c9e30d94
+
+Time (s): cpu = 00:46:12 ; elapsed = 00:32:14 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:46:12 ; elapsed = 00:32:14 . Memory (MB): peak = 3177.547 ; gain = 1085.617
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+218 Infos, 3 Warnings, 8 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 01:02:48 ; elapsed = 00:42:58 . Memory (MB): peak = 3177.547 ; gain = 1127.867
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3177.547 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3177.547 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Nibbler_drc_routed.rpt -pb Nibbler_drc_routed.pb -rpx Nibbler_drc_routed.rpx
+Command: report_drc -file Nibbler_drc_routed.rpt -pb Nibbler_drc_routed.pb -rpx Nibbler_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:09:06 ; elapsed = 00:05:45 . Memory (MB): peak = 3177.547 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file Nibbler_methodology_drc_routed.rpt -pb Nibbler_methodology_drc_routed.pb -rpx Nibbler_methodology_drc_routed.rpx
+Command: report_methodology -file Nibbler_methodology_drc_routed.rpt -pb Nibbler_methodology_drc_routed.pb -rpx Nibbler_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/Vivado/NibblerCPU_3p5mhz/NibblerCPU_3p5mhz.runs/impl_1/Nibbler_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:09:49 ; elapsed = 00:06:16 . Memory (MB): peak = 3177.547 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file Nibbler_power_routed.rpt -pb Nibbler_power_summary_routed.pb -rpx Nibbler_power_routed.rpx
+Command: report_power -file Nibbler_power_routed.rpt -pb Nibbler_power_summary_routed.pb -rpx Nibbler_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+230 Infos, 3 Warnings, 8 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:08:28 ; elapsed = 00:05:12 . Memory (MB): peak = 3177.547 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file Nibbler_route_status.rpt -pb Nibbler_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Nibbler_timing_summary_routed.rpt -pb Nibbler_timing_summary_routed.pb -rpx Nibbler_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Nibbler_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Nibbler_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Nibbler_bus_skew_routed.rpt -pb Nibbler_bus_skew_routed.pb -rpx Nibbler_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 17 02:30:13 2024...
